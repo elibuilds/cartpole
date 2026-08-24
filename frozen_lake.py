@@ -19,7 +19,7 @@ def run(episodes, is_training=False, render=False):
 
     # hyperparameters we can adjust
 
-    learning_rate = 0.9 
+    learning_rate = 1.0
     discount_factor_g = 0.9
 
     epsilon = 1.0         # Start with 100% random actions
@@ -76,4 +76,7 @@ def run(episodes, is_training=False, render=False):
 
 
 if __name__ == '__main__':
-    run(1, render=True, is_training=False)
+    run(100000, is_training=True) #adjust number of episodes 
+
+    # comment out above run command and uncomment below to view agent use trained q table
+    #run(1,render='human', is_training=False) 
